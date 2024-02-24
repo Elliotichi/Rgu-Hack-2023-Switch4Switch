@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SimpleMap from './Map/SimpleMap';
 import { Container } from '@mui/material';
 import { CourseList } from './Courses/CourseList';
-import { Place } from './Place';
+import { Place } from './Carousel/Place';
 
 
 export function App() {
@@ -11,7 +11,7 @@ export function App() {
             <div id="above">
                 <Container>
                     <CourseList />
-                    <Place />
+                    <Place name={"Name"} description={"description"} />
                 </Container>
             </div>
             <div id="below">
