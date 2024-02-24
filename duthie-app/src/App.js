@@ -7,8 +7,8 @@ function Hello() {
     );
 }
 
-// export function App() {
-//     const [count, setCount] = useState(0);
+export function App() {
+     const [count, setCount] = useState(0);
 
     return (
         <div>
