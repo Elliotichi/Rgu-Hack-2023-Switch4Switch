@@ -7,16 +7,16 @@ export function Hello() {
     );
 }
 
-export function App() {
-    const [count, setCount] = useState(0);
+// export function App() {
+//     const [count, setCount] = useState(0);
 
-    return (
-        <div>
-            <Hello />
-            <button onClick={() => setCount(count + 1)}>click to increment</button>
-            <p>{count}</p>
-        </div>
-    );
-}
+//     return (
+//         <div>
+//             <Hello />
+//             <button onClick={() => setCount(count + 1)}>click to increment</button>
+//             <p>{count}</p>
+//         </div>
+//     );
+// }
 
 
