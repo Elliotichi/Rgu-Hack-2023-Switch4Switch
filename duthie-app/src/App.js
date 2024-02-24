@@ -6,9 +6,15 @@ import { CourseList } from './Courses/CourseList';
 
 export function App() {
     return (
-        <div>
-            <CourseList />
-            <SimpleMap />
+        <div id="container">
+            <div id="above">
+                <Container>
+                    <CourseList />
+                </Container>
+            </div>
+            <div id="below">
+                <SimpleMap />
+            </div>
         </div>
     );
 }
