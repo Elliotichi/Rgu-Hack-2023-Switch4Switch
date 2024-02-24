@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SimpleMap from './Map/SimpleMap';
 
 function Hello() {
     return (
@@ -6,7 +7,7 @@ function Hello() {
     );
 }
 
-function App() {
+export function App() {
     const [count, setCount] = useState(0);
 
     return (
@@ -14,8 +15,7 @@ function App() {
             <Hello />
             <button onClick={() => setCount(count + 1)}>click to increment</button>
             <p>{count}</p>
+            <SimpleMap />
         </div>
     );
 }
-
-export default App;
