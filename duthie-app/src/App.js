@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Course } from './Courses/Course';
 import { Container } from '@mui/material';
+import { CourseList } from './Courses/CourseList';
 
 function Hello() {
     return (
@@ -13,7 +13,7 @@ function App() {
 
     return (
         <Container>
-            <Course name={"course"} distance={10} info={"information sudhfui shdi fuishiof iohjfiosdh fiohsdofuosdh iofhisodh fio shiodhfio siohiofiod hiosdhfio siodh fioshiodf iosdiofh shfsio"}/>
+            <CourseList />
             <Hello />
             <button onClick={() => setCount(count + 1)}>click to increment</button>
             <p>{count}</p>

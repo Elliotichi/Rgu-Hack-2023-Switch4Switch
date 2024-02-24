@@ -12,7 +12,7 @@ export function Course(props) {
                 alignItems="center"
                 columns={5}>
                 <Grid item xs={3} sm={3}>
-                    <div class="course-text">
+                    <div className="course-text">
                         <Typography variant="h4">{props.name}</Typography>
                         <Typography>{props.distance + "km"}</Typography>
                         <Typography>{props.info}</Typography>
