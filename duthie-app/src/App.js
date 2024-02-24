@@ -3,6 +3,7 @@ import SimpleMap from './Map/SimpleMap';
 import { Container } from '@mui/material';
 import { CourseList } from './Courses/CourseList';
 import { Place } from './Carousel/Place';
+import { Carousel } from './Carousel/Carousel';
 
 
 export function App() {
@@ -12,6 +13,7 @@ export function App() {
                 <Container>
                     <CourseList />
                     <Place name={"Name"} description={"description"} />
+                    <Carousel />
                 </Container>
             </div>
             <div id="below">
