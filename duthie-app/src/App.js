@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
-
-export function Hello() {
+function Hello() {
     return (
         <p>Hello world!</p>
     );
 }
 
-export function App() {
+function App() {
     const [count, setCount] = useState(0);
 
     return (
@@ -19,4 +18,4 @@ export function App() {
     );
 }
 
-
+export default App;
