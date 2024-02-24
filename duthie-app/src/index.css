@@ -2,6 +2,6 @@ body {
   margin: 0;
 }
 
-#map{
-  height: 180px;
+.course-text {
+  padding: 10px;
 }
