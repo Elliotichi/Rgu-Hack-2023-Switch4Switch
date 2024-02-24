@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import markericonpng from "leaflet/dist/images/marker-icon.png"
+import {icon} from 'leaflet'
+
 
 const SimpleMap = () => {
   const mapRef = useRef(null);
