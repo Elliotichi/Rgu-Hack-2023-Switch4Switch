@@ -10,8 +10,23 @@ const SimpleMap = (props) => {
   const mapRef = useRef(null);
   const latitude = 57.13049074585778;
   const longitude = -2.1035564224553425;
-  
 
+  function LocationMarkers() {
+    return (
+      <React.Fragment>
+        {trail_points.map(point => <Marker
+          position={[point.lat, point.long]}
+          icon={new icon({ iconUrl: markericonpng, iconsize: [25, 41], iconanchor: [12, 41] })}
+          eventHandlers={{
+            click: (e) => {
+              props.setCurrentMarker(point.id)
+            }
+          }}>  
+        
+        </Marker>)}
+      </React.Fragment>
+    );
+  }
 
   return (
     // Make sure you set the height and width of the map container otherwise the map won't show
@@ -23,16 +38,15 @@ const SimpleMap = (props) => {
       {/* Additional map layers or components can be added here */}
 
 
-    {/* Example Marker using JSON data*/}
-      <Marker 
-      position={[trail_points[0].lat, trail_points[0].long]}
-      icon={new icon({ iconUrl: markericonpng, iconsize: [25, 41], iconanchor: [12, 41] })}>
+      {/* Example Marker using JSON data*/}
+      <Marker
+        position={[trail_points[0].lat, trail_points[0].long]}
+        icon={new icon({ iconUrl: markericonpng, iconsize: [25, 41], iconanchor: [12, 41] })}>
       </Marker>
 
 
-
-      <Marker 
-      position={[latitude, longitude]}
+      <Marker
+        position={[latitude, longitude]}
         eventHandlers={{
           click: (e) => {
             props.setCurrentMarker(3)
@@ -44,9 +58,11 @@ const SimpleMap = (props) => {
           WELCOME TO DUTHIE PARK o/ <br />
         </Popup>
       </Marker>
-
+      <LocationMarkers />
     </MapContainer>
   );
 };
+
+
 
 export default SimpleMap;
