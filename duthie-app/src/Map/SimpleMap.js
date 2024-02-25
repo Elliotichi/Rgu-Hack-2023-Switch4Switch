@@ -51,6 +51,8 @@ const SimpleMap = (props) => {
 
       <Marker
         position={[latitude, longitude]}
+      <Marker
+        position={[latitude, longitude]}
         eventHandlers={{
           click: (e) => {
             props.setCurrentMarker(3)
