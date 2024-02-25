@@ -10,7 +10,8 @@ const SimpleMap = (props) => {
     const [markers, setMarkers] = useState([]);
     const mapRef = useRef(null);
     const [latitude, setLat] = useState(57.13049074585778);
-    const [longitude, setLong] = useState(-2.1035564224553425);    const mapBounds = [
+    const [longitude, setLong] = useState(-2.1035564224553425);    
+    const mapBounds = [
       // North - East
       [57.136261572464484, -2.0953181817566313], 
       // South - West
@@ -64,7 +65,7 @@ const SimpleMap = (props) => {
         // Make sure you set the height and width of the map container otherwise the map won't show
         <MapContainer
             center={[latitude, longitude]}
-            zoom={17}
+            zoom={16}
             ref={mapRef}
             dragging={true}
             maxBounds={mapBounds}
@@ -83,7 +84,6 @@ const SimpleMap = (props) => {
         icon={new icon({ iconUrl: markericonpng, iconsize: [25, 41], iconanchor: [12, 41] })}>
       </Marker>
       
-
 
       <Marker
         position={[latitude, longitude]}
