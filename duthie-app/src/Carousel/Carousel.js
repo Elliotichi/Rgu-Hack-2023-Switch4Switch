@@ -31,7 +31,6 @@ export function Carousel(props) {
         return (num + places.length) % places.length; 
     }
 
-
     return (
 
         <div {...handlers}>

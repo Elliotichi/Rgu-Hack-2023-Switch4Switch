@@ -11,8 +11,8 @@ export function Place(props) {
                     justifyContent="space-between"
                     alignItems="left"
                     columns={5}>
-                    <Grid item>
-                        <img src={props.img}></img>
+                    <Grid item className="place-img">
+                        <img src={props.img} className="place-img"></img>
                     </Grid>
                     <Grid item xs={3} sm={3}>
                         <Typography variant="h4">{props.name}</Typography>

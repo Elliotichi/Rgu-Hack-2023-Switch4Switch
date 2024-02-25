@@ -4,10 +4,9 @@ import { useSwipeable } from 'react-swipeable';
 import { Slide } from "@mui/material";
 
 const courses = [
-    {name: "long1", info: "description", distance: 3},
-    {name: "long2", info: "description", distance: 3},
-    {name: "long3", info: "description", distance: 3},
-    {name: "long4", info: "description", distance: 3},
+    {name: "Short course", info: "Explore Duthie Park through a shorter walk!", distance: 1},
+    {name: "Long course", info: "Enjoy a longer walk through Duthie Park!", distance: 1.9},
+    {name: "Duthie Park Wildlife Trail", info: "Can you find all 12 rubbing plaques depicting some of the park's wildlife?", distance: 1.2},
 ]
 
 export function CourseList(props) {

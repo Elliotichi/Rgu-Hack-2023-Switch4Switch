@@ -12,15 +12,15 @@ export function Course(props) {
                     justifyContent="space-between"
                     alignItems="center"
                     columns={5}>
-                    <Grid item>
+                    <Grid item xs zeroMinWidth>
                         <div className="course-text">
-                            <Typography variant="h4">{props.name}</Typography>
-                            <Typography>{props.distance + "km"}</Typography>
-                            <Typography>{props.info}</Typography>
+                            <Typography noWrap={false} variant="h5">{props.name}</Typography>
+                            <Typography noWrap={false}>{props.distance + "km"}</Typography>
+                            <Typography noWrap={false} style={{overflowWrap: 'break-word'}}>{props.info}</Typography>
                         </div>
                     </Grid>
                     <Grid item>
-                        <Skeleton variant="rectangular" width={210} height={118} />
+                        <Skeleton variant="rectangular" width={150} height={100} />
                     </Grid>
                 </Grid>
             </div>

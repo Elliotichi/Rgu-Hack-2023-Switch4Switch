@@ -80,3 +80,9 @@ body, html {
 .margin-bottom {
     margin-bottom: 10px !important;
 }
+
+.place-img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 400px;
+}
