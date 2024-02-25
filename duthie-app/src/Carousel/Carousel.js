@@ -8,7 +8,7 @@ import { trail_points } from "../data/points";
 const places = []
 
 for(var i = 0; i < trail_points.length; i++){
-    places.push({name:trail_points[i].name, description:trail_points[i].description});
+    places.push({name:trail_points[i].name, description:trail_points[i].description, img:trail_points[i].image});
 }
 
 
@@ -37,7 +37,8 @@ export function Carousel(props) {
         <div {...handlers}>
             <Place
                 name={places[props.currentCarousel].name}
-                description={places[props.currentCarousel].description} />
+                description={places[props.currentCarousel].description} 
+                img={places[props.currentCarousel].img}/>
         </div>
 
     );

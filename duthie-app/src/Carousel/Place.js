@@ -12,7 +12,7 @@ export function Place(props) {
                     alignItems="left"
                     columns={5}>
                     <Grid item>
-                        <Skeleton variant="rectangular" width={210} height={118} />
+                        <img src={props.img}></img>
                     </Grid>
                     <Grid item xs={3} sm={3}>
                         <Typography variant="h4">{props.name}</Typography>
