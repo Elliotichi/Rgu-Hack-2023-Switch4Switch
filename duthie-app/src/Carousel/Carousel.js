@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { Place } from "./Place";
+import { trail_points } from "../data/points"; 
 
 
-const places = [
-    { name: "cunt1", description: "description", },
-    { name: "cunt2", description: "description", },
-    { name: "cunt3", description: "description", },
-    { name: "cunt4", description: "description", },
-]
+
+const places = []
+
+for(var i = 0; i < trail_points.length; i++){
+    places.push({name:trail_points[i].name, description:trail_points[i].description});
+}
 
 
 export function Carousel(props) {
