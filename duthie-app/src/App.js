@@ -3,19 +3,23 @@ import SimpleMap from './Map/SimpleMap';
 import { Container } from '@mui/material';
 import { CourseList } from './Courses/CourseList';
 import { Place } from './Carousel/Place';
-import { Header } from './Navigation/Header';
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
-import { Map } from './Map';
-import { About } from './About/About';
+import { Carousel } from './Carousel/Carousel';
+
 
 export function App() {
     return (
-        <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route path='/' element={ <Map /> } />
-                <Route path='/about' element={ <About /> } />
-            </Routes>
-        </BrowserRouter>
+        <div id="container">
+            <div id="above">
+                <Container>
+                    <CourseList />
+                    <Place name={"Name"} description={"description"} />
+                    <Carousel />
+                </Container>
+            </div>
+            <div id="below">
+                <SimpleMap />
+            </div>
+            
+        </div>
     );
 }
