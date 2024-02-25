@@ -73,7 +73,7 @@ const SimpleMap = (props) => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <SvgPath bounds={mapBounds}/>
+            {/* <SvgPath bounds={mapBounds}/> */}
             {/* Additional map layers or components can be added here */}
 
 
@@ -104,10 +104,10 @@ const SimpleMap = (props) => {
     );
 };
 
-function SvgPath(props) {
-    return (    <SVGOverlay attributes={{ stroke: 'red' }} bounds={props.bounds}>
-    <line x1="300" y1="600" x2="520" y2="520" stroke="black" />
-  </SVGOverlay>);
-}
+// function SvgPath(props) {
+//     return (    <SVGOverlay attributes={{ stroke: 'red' }} bounds={props.bounds}>
+//     <line x1="300" y1="600" x2="520" y2="520" stroke="black" />
+//   </SVGOverlay>);
+// }
 
 export default SimpleMap;
