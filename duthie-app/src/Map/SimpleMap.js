@@ -10,15 +10,12 @@ const SimpleMap = (props) => {
     const [markers, setMarkers] = useState([]);
     const mapRef = useRef(null);
     const [latitude, setLat] = useState(57.13049074585778);
-    const [longitude, setLong] = useState(-2.1035564224553425);
-    const mapBounds = [
+    const [longitude, setLong] = useState(-2.1035564224553425);    const mapBounds = [
       // North - East
-      [57.12698153527713, -2.111509172184448], 
+      [57.136261572464484, -2.0953181817566313], 
       // South - West
-      [57.13906465294813, -2.0918205812012776]
+      [57.126444501476776, -2.1134284570251696]
   ];
-
-    console.log(trail_points)
 
     useEffect(() => {
         let m = [];
