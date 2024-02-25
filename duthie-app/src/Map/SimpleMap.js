@@ -12,8 +12,10 @@ const SimpleMap = (props) => {
     const [latitude, setLat] = useState(57.13049074585778);
     const [longitude, setLong] = useState(-2.1035564224553425);
     const mapBounds = [
+      // North - East
       [57.12698153527713, -2.111509172184448], 
-      [57.13596465294813, -2.0918205812012776]
+      // South - West
+      [57.13906465294813, -2.0918205812012776]
   ];
 
     console.log(trail_points)
