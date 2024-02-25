@@ -21,9 +21,10 @@ export function About() {
                 <div className="margin-bottom">
                 <AccordionUsage2 />
                 </div>
-                <div>
+                <div className="margin-bottom">
                     <AccordionUsage3 />
                 </div>
+                <img src="./images/33.png" className="about-img"></img>
             </div>
         </div>
     );
