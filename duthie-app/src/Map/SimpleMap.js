@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import markericonpng from "leaflet/dist/images/marker-icon.png"
-import { icon } from 'leaflet'
+import { Draggable, icon } from 'leaflet'
 import { trail_points } from '../data/points.js';
 
 
@@ -15,7 +15,12 @@ const SimpleMap = (props) => {
 
   return (
     // Make sure you set the height and width of the map container otherwise the map won't show
-    <MapContainer center={[latitude, longitude]} zoom={17} ref={mapRef} style={{ height: "100vh", width: "100vw" }}>
+    <MapContainer
+      center={[latitude, longitude]} 
+      zoom={17} 
+      ref={mapRef} 
+      dragging={true}
+      style={{ height: "100vh", width: "100vw" }}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -3,7 +3,7 @@ import { Card, Grid, Skeleton, Typography } from "@mui/material";
 export function Place(props) {
     return (
         <Card>
-            <div className="carousel-card">
+            <div className="carousel-card addPointerEvents">
                 <Grid 
                     container 
                     spacing={0}

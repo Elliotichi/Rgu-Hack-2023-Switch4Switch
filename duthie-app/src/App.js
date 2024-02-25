@@ -11,8 +11,7 @@ import { About } from './About/About';
 export function App() {
     return (
         <BrowserRouter>
-            <Header />
-            <Routes>
+            <Routes >
                 <Route path='/' element={ <Map /> } />
                 <Route path='/about' element={ <About /> } />
             </Routes>
