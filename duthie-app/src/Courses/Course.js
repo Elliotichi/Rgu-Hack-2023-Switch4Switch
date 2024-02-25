@@ -19,9 +19,9 @@ export function Course(props) {
                             <Typography noWrap={false} style={{overflowWrap: 'break-word'}}>{props.info}</Typography>
                         </div>
                     </Grid>
-                    <Grid item>
+                    {/* <Grid item>
                         <Skeleton variant="rectangular" width={150} height={100} />
-                    </Grid>
+                    </Grid> */}
                 </Grid>
             </div>
         </Card>

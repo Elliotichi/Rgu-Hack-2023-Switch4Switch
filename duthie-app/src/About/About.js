@@ -4,13 +4,13 @@ import { Header } from "../Navigation/Header";
 
 export function About() {
     return (
-        <div>
+        <div style={{overflowY: "scroll", height: "100%"}}>
             <div className='header'>
                 <Header />
             </div>
             <div className="about">
                 <Typography variant="h6" className="center margin-bottom">Welcome to Duthie Park!</Typography>
-                <img src="./images/9.png"></img>
+                <img src="./images/9.png" className="about-img"></img>
                 <Typography className="margin-bottom">
                     Duthie Park opened in 1883 after it was gifted to the city by Miss Elizabeth Crombie Duthie in 1880 for the ‘wellbeing and recreation of Aberdeen inhabitants'.
                 </Typography>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 // import markericonpng from "leaflet/dist/images/marker-icon.png"
@@ -6,14 +6,35 @@ import "leaflet/dist/leaflet.css";
 import { Draggable, icon } from 'leaflet'
 import { trail_points } from '../data/points.js';
 
-let markers = [];
 const SimpleMap = (props) => {
+    const [markers, setMarkers] = useState([]);
     const mapRef = useRef(null);
     const latitude = 57.13049074585778;
     const longitude = -2.1035564224553425;
     console.log(trail_points)
 
+    useEffect(() => {
+        let m = [];
+        for (var i = 0; i <= trail_points.length; i++) {
+            if (trail_points[i] == undefined) {
+                break;
+            }
+            m.push(<Marker
+                position={[trail_points[i].lat, trail_points[i].long]}
+                alt={i}
+                eventHandlers={{
+                    click: (e) => {
+                        console.table(e);
+                        console.log("*************************************************************i " + e);
+                        props.setCurrentMarker(e.sourceTarget.options.alt);
+                    }
+                }}
+                icon={new icon({ iconUrl: i==props.currentMarker ? "./marker-red.png" : "./marker.png", iconsize: [25, 41], iconanchor: [12, 41] })}>
+            </Marker>)
+        };
 
+        setMarkers(m);
+    }, [props.currentMarker])
 
     for (var i = 0; i <= trail_points.length; i++) {
         if (trail_points[i] == undefined) {

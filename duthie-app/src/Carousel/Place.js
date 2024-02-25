@@ -1,4 +1,4 @@
-import { Card, Grid, Skeleton, Typography } from "@mui/material";
+import { Card, Grid, ThemeProvider, Typography } from "@mui/material";
 
 export function Place(props) {
     return (
@@ -15,7 +15,7 @@ export function Place(props) {
                         <img src={props.img} className="place-img"></img>
                     </Grid>
                     <Grid item xs={3} sm={3}>
-                        <Typography variant="h4">{props.name}</Typography>
+                        <Typography variant="h5">{props.name}</Typography>
                     </Grid>
                     <Grid item xs={3} sm={3}>
                         <Typography>{props.description}</Typography>
