@@ -11,6 +11,11 @@ const SimpleMap = (props) => {
     const mapRef = useRef(null);
     const latitude = 57.13049074585778;
     const longitude = -2.1035564224553425;
+    const mapBounds = [
+      [57.12698153527713, -2.111509172184448], 
+      [57.13596465294813, -2.0918205812012776]
+  ];
+
     console.log(trail_points)
 
     useEffect(() => {
@@ -63,6 +68,7 @@ const SimpleMap = (props) => {
             zoom={17}
             ref={mapRef}
             dragging={true}
+            maxBounds={mapBounds}
             style={{ height: "100vh", width: "100vw" }}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
