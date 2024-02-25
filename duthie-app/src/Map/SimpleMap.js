@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, SVGOverlay } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 // import markericonpng from "leaflet/dist/images/marker-icon.png"
 // import markericonpng from "%PUBLIC%/images/marker-icon.png"
@@ -76,6 +76,7 @@ const SimpleMap = (props) => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
+            <SvgPath bounds={mapBounds}/>
             {/* Additional map layers or components can be added here */}
 
 
@@ -105,5 +106,11 @@ const SimpleMap = (props) => {
         </MapContainer>
     );
 };
+
+function SvgPath(props) {
+    return (    <SVGOverlay attributes={{ stroke: 'red' }} bounds={props.bounds}>
+    <line x1="300" y1="600" x2="520" y2="520" stroke="black" />
+  </SVGOverlay>);
+}
 
 export default SimpleMap;
