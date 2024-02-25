@@ -56,7 +56,7 @@ body, html {
 }
 
 .header {
-    background-color: rgb(250, 249, 247);
+    background-color: white;
     position: absolute;
     top: 0;
     left: 0;
