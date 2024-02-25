@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, SVGOverlay } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 // import markericonpng from "leaflet/dist/images/marker-icon.png"
 // import markericonpng from "%PUBLIC%/images/marker-icon.png"
@@ -10,15 +10,12 @@ const SimpleMap = (props) => {
     const [markers, setMarkers] = useState([]);
     const mapRef = useRef(null);
     const [latitude, setLat] = useState(57.13049074585778);
-    const [longitude, setLong] = useState(-2.1035564224553425);
-    const mapBounds = [
+    const [longitude, setLong] = useState(-2.1035564224553425);    const mapBounds = [
       // North - East
-      [57.12698153527713, -2.111509172184448], 
+      [57.136261572464484, -2.0953181817566313], 
       // South - West
-      [57.13906465294813, -2.0918205812012776]
+      [57.120444501476776, -2.1134284570251696]
   ];
-
-    console.log(trail_points)
 
     useEffect(() => {
         let m = [];
@@ -76,6 +73,7 @@ const SimpleMap = (props) => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
+            {/* <SvgPath bounds={mapBounds}/> */}
             {/* Additional map layers or components can be added here */}
 
 
@@ -105,5 +103,11 @@ const SimpleMap = (props) => {
         </MapContainer>
     );
 };
+
+// function SvgPath(props) {
+//     return (    <SVGOverlay attributes={{ stroke: 'red' }} bounds={props.bounds}>
+//     <line x1="300" y1="600" x2="520" y2="520" stroke="black" />
+//   </SVGOverlay>);
+// }
 
 export default SimpleMap;
