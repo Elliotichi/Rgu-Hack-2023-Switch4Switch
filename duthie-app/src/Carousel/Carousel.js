@@ -16,8 +16,8 @@ export function Carousel(props) {
     
     // handlers to swipe left and right
     const handlers = useSwipeable({
-        onSwipedLeft: () => switchCarousel(props.currentCarousel - 1, "right"),
-        onSwipedRight: () => switchCarousel(props.currentCarousel + 1, "left"),
+        onSwipedLeft: () => switchCarousel(props.currentCarousel + 1, "right"),
+        onSwipedRight: () => switchCarousel(props.currentCarousel - 1, "left"),
         swipeDuration: 500,
         preventScrollOnSwipe: true,
         trackMouse: true
