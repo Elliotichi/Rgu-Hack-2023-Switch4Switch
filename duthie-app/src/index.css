@@ -90,3 +90,11 @@ body, html {
     max-width: 100%;
     max-height: 500px;
 }
+
+.nav-icon {
+    color: #4193d0;
+}
+
+.nav-icon2 {
+    color: #abccb0;
+}

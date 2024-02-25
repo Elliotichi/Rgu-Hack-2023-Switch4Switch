@@ -15,14 +15,14 @@ export function Header(props) {
                 <Grid item>
                     <Link to="/">
                         <IconButton>
-                            <MapIcon fontSize="large" />
+                            <MapIcon className="nav-icon2" fontSize="large" />
                         </IconButton>
                     </Link>
                 </Grid>
                 <Grid item>
                     <Link to="/about">
                         <IconButton>
-                            <HomeIcon fontSize="large" />
+                            <HomeIcon className="nav-icon" fontSize="large" />
                         </IconButton>
                     </Link>
                 </Grid>
