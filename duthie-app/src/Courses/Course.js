@@ -14,9 +14,9 @@ export function Course(props) {
                     columns={5}>
                     <Grid item xs zeroMinWidth>
                         <div className="course-text">
-                            <Typography noWrap={false} variant="h5">{props.name}</Typography>
-                            <Typography noWrap={false}>{props.distance + "km"}</Typography>
-                            <Typography noWrap={false} style={{overflowWrap: 'break-word'}}>{props.info}</Typography>
+                            <Typography noWrap={false} variant="h6">{props.name}</Typography>
+                            <Typography className="aboutText" noWrap={false}>{props.distance + "km"}</Typography>
+                            <Typography className="aboutText" noWrap={false} style={{overflowWrap: 'break-word'}}>{props.info}</Typography>
                         </div>
                     </Grid>
                     {/* <Grid item>

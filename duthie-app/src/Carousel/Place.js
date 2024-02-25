@@ -15,10 +15,10 @@ export function Place(props) {
                         <img src={props.img} className="place-img"></img>
                     </Grid>
                     <Grid item xs={3} sm={3}>
-                        <Typography variant="h5">{props.name}</Typography>
+                        <Typography variant="h6">{props.name}</Typography>
                     </Grid>
                     <Grid item xs={3} sm={3}>
-                        <Typography>{props.description}</Typography>
+                        <Typography className="aboutText">{props.description}</Typography>
                     </Grid>
                 </Grid>
             </div>
