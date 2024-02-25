@@ -3,12 +3,15 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import markericonpng from "leaflet/dist/images/marker-icon.png"
 import { icon } from 'leaflet'
+import { trail_points } from '../data/points.js';
 
 
 const SimpleMap = () => {
   const mapRef = useRef(null);
   const latitude = 57.13049074585778;
   const longitude = -2.1035564224553425;
+
+
 
   return (
     // Make sure you set the height and width of the map container otherwise the map won't show
@@ -18,12 +21,23 @@ const SimpleMap = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {/* Additional map layers or components can be added here */}
-      <Marker position={[latitude, longitude]}
+
+
+    {/* Example Marker using JSON data*/}
+      <Marker 
+      position={[trail_points[0].lat, trail_points[0].long]}
+      icon={new icon({ iconUrl: markericonpng, iconsize: [25, 41], iconanchor: [12, 41] })}>
+      </Marker>
+
+
+
+      <Marker 
+      position={[latitude, longitude]}
         eventHandlers={{
           click: (e) => {
             console.log("Welcome to Duthie park!")
           }
-        }} 
+        }}
         icon={new icon({ iconUrl: markericonpng, iconsize: [25, 41], iconanchor: [12, 41] })}>
 
         <Popup>

@@ -5,7 +5,7 @@ export const trail_points = [
     "description": "Nineteenth century baronial lodge in tooled coursed grey granite, built 1882/83.",
     "image":"./images/1.png",
     "lat":57.13230227267181,
-    "long:":-2.102209953529852
+    "long":-2.102209953529852
 }, 
 {
     "id":2,
