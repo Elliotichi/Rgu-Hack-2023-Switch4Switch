@@ -11,19 +11,19 @@ const places = [
 ]
 
 
-export function Carousel() {
-    const [currentCarousel, setCurrentCarousel] = useState(0);
+export function Carousel(props) {
+    
     // handlers to swipe left and right
     const handlers = useSwipeable({
-        onSwipedLeft: () => switchCarousel(currentCarousel - 1, "right"),
-        onSwipedRight: () => switchCarousel(currentCarousel + 1, "left"),
+        onSwipedLeft: () => switchCarousel(props.currentCarousel - 1, "right"),
+        onSwipedRight: () => switchCarousel(props.currentCarousel + 1, "left"),
         swipeDuration: 500,
         preventScrollOnSwipe: true,
         trackMouse: true
     });
 
     const switchCarousel = (itemNum, direction) => {
-        setCurrentCarousel(getPlace(itemNum));
+        props.setCurrentCarousel(getPlace(itemNum));
     }
 
     const getPlace = (num) => {
@@ -35,8 +35,8 @@ export function Carousel() {
 
         <div {...handlers}>
             <Place
-                name={places[currentCarousel].name}
-                description={places[currentCarousel].description} />
+                name={places[props.currentCarousel].name}
+                description={places[props.currentCarousel].description} />
         </div>
 
     );

@@ -6,11 +6,11 @@ import { icon } from 'leaflet'
 import { trail_points } from '../data/points.js';
 
 
-const SimpleMap = () => {
+const SimpleMap = (props) => {
   const mapRef = useRef(null);
   const latitude = 57.13049074585778;
   const longitude = -2.1035564224553425;
-
+  
 
 
   return (
@@ -35,7 +35,7 @@ const SimpleMap = () => {
       position={[latitude, longitude]}
         eventHandlers={{
           click: (e) => {
-            console.log("Welcome to Duthie park!")
+            props.setCurrentMarker(3)
           }
         }}
         icon={new icon({ iconUrl: markericonpng, iconsize: [25, 41], iconanchor: [12, 41] })}>
