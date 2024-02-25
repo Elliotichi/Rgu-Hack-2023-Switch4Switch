@@ -9,9 +9,8 @@ import { trail_points } from '../data/points.js';
 const SimpleMap = (props) => {
     const [markers, setMarkers] = useState([]);
     const mapRef = useRef(null);
-    const latitude = 57.13049074585778;
-    const longitude = -2.1035564224553425;
-    const mapBounds = [
+    const [latitude, setLat] = useState(57.13049074585778);
+    const [longitude, setLong] = useState(-2.1035564224553425);    const mapBounds = [
       // North - East
       [57.136261572464484, -2.0953181817566313], 
       // South - West
