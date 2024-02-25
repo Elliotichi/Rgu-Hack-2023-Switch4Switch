@@ -21,6 +21,7 @@ export function About() {
                     Opening times
                 </Typography>
                 <Typography>Open 24 hours</Typography>
+                <img src="./images/33.png" className="about-img"></img>
             </div>
         </div>
     );
